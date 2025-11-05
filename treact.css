@@ -23,7 +23,7 @@ body {
 }
 .row {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -80,6 +80,7 @@ button {
 } 
 
 .section__para {
+    font-size: 18px;
     font-weight: 500;
     color: #7c8ba1;
     line-height: 1.625;
@@ -362,7 +363,6 @@ QUALITY WORK
 }
 
 
-
 .btn {
     background-color: #6415ff;
     color: white;
@@ -371,4 +371,32 @@ QUALITY WORK
     font-weight: bold;
     transition: all 300ms ease;
     border-radius: 50px;
+    margin-top: 32px;
+}
+
+.quality__img--wrapper {
+    border: 1px solid rgb(229,231,235);
+    border-radius: 4px;
+    position: relative;
+    margin: 0 56px;
+    z-index: 2;
+    display: flex;
+}
+
+.quality__img {
+    z-index: 1;
+}
+
+.quality__grid {
+    position: absolute;
+    transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
+    width: 80px;
+    height: 80px;
+    right: 0px;
+    bottom: 0px;
+    color: rgba(100, 21, 255);
+    fill: rgb(100, 21, 255);
+    z-index: 0;
+    display: block;
+    
 }
