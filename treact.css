@@ -211,13 +211,13 @@ HEADER
 .header__email--input:focus, .header__email--input:active {
     outline: none;
     border-color: rgba(100,21,255);
-    transition: border-color 200ms ease-in;
 }
 
  .header__email--input {
     width: 100%;
     border-radius: 500px;
     border: 2px solid rgb(229,231,235);
+    transition: border-color 300ms;
     padding: 20px 192px 20px 32px;
     color: rgb(36, 62, 99);
     font-size: 16px;
@@ -229,7 +229,6 @@ HEADER
  }
 
  .header__email--input:hover {
-    transition: border-color 500ms ease-in;
     border-color: rgba(160,174,192);
  }
 
