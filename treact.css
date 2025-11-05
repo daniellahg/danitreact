@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .text--purple {
     color: #6415ff;
 }
@@ -66,11 +67,10 @@ button {
     font-size: 16px;
     color: #6415ff;
     letter-spacing: 1.6px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .section__title {
-    text-align: center;
     font-size: 48px;
     font-weight: 900;
     color: rgb(36, 62, 99);
@@ -208,6 +208,10 @@ HEADER
 
 }
 
+ .header__email--input:hover {
+    border-color: rgba(160,174,192);
+ }
+
 .header__email--input:focus, .header__email--input:active {
     outline: none;
     border-color: rgba(100,21,255);
@@ -228,9 +232,6 @@ HEADER
     z-index: 1;
  }
 
- .header__email--input:hover {
-    border-color: rgba(160,174,192);
- }
 
 .header__email--btn {
     z-index: 2;
@@ -270,6 +271,13 @@ HEADER
 FEATURES 
 */
 
+.container {
+    padding: 80px 0;
+}
+
+.section__title--features {
+    text-align: center;
+}
 .section__para--features {
     text-align: center;
     max-width: 576px;
@@ -311,7 +319,56 @@ FEATURES
     height: 24px;
 }
 
-.feature__text {
+.feature__description {
     margin-top: 8px;
     margin-left: 16px;
+}
+
+.feature__description--para {
+    margin-top: 16px;
+    font-size: 16px;
+    max-width: calc(634px / 3);
+    color: rgb(124, 139, 161);
+    line-height: 2;
+    font-weight: 500;
+}
+
+/* 
+
+QUALITY WORK 
+
+*/
+
+#quality-work {
+   padding: 0 32px;
+}
+.row__quality {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quality__description, .quality__img--wrapper {
+    width: 50%;
+}
+
+.quality__description {
+    max-width: 576px;
+    margin-right: 64px;
+}
+
+.section__title--quality-work {
+    line-height: 1.25;
+}
+
+
+
+.btn {
+    background-color: #6415ff;
+    color: white;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 300ms ease;
+    border-radius: 50px;
 }
