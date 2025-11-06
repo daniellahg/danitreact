@@ -610,7 +610,7 @@ PRICING
     justify-content: center;
 }
 
-.plan{
+.plan {
 position: relative;
 display: flex;
 flex-direction: column;
@@ -618,9 +618,8 @@ width: 100%;
 max-width: 24rem;
 border-radius: .5rem;
 background-color: rgb(255,255,255);
-padding: 0.5rem 2rem;
-margin-right: 2rem;
-margin-top: 4rem;
+padding: 0.5rem 2rem 0 2rem;
+margin: 4rem 2rem 0 0;
 text-align: center;
 color: rgb(26 32 44);
 box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -630,6 +629,17 @@ box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
 .plan:nth-child(1) .plan__btn {
     color: #f7fafc;
     background: linear-gradient(115deg, rgb(56,178,172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan:nth-child(3) .plan__stripe,
+.plan:nth-child(3) .plan__btn {
+    color: #f7fafc;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+
+.plan:nth-child(2) {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
 
 .plan__stripe {
@@ -642,6 +652,8 @@ box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
     border-top-right-radius: 0.5rem;
 }
 
+/* PLAN TOP */
+
 .plan__top {
     display: flex;
     flex-direction: column;
@@ -651,6 +663,115 @@ box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
 
 .plan:nth-child(odd) .plan__name,
 .plan:nth-child(odd) .plan__price,
-.plan:nth-child(odd) .plan__target, {
-    color: green;
+.plan:nth-child(odd) .plan__target {
+    color: #1a202c;
+}
+
+.plan:nth-child(even) .plan__name,
+.plan:nth-child(even) .plan__price,
+.plan:nth-child(even) .plan__duration,
+.plan:nth-child(even) .plan__target,
+.plan:nth-child(even) .plan__feature {
+    color: #f7fafc;
+}
+
+
+.plan__name, 
+.plan__price,
+.plan__target,
+.plan__duration {
+    font-weight: bold;
+    line-height: 1.625;
+}
+
+.plan__name {
+    font-size: 20px;
+}
+
+.plan__price {
+    font-size: 48px;
+    margin: 4px 0;
+}
+
+.plan:nth-child(odd) .plan__duration {
+    color: #a0aec0;
+}
+
+.plan__duration {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+
+/* PLAN MIDDLE */
+
+.plan:nth-child(odd) .plan__middle {
+    border-top: 2px solid rgb(229,231,235);
+    border-bottom: 2px solid rgb(229,231,235);
+}
+
+.plan:nth-child(even) .plan__middle {
+    border-top: 2px solid rgb(102, 126, 234);
+    border-bottom: 2px solid rgb(102, 126, 234);
+}
+
+.plan__middle {
+    margin: 0 -2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding: 2rem;
+}
+
+.plan__target {
+    font-size: 20px;
+    letter-spacing: 0.025em;
+}
+
+.plan__feature {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #718096;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* PLAN BOTTOM */
+
+
+.plan__bottom {
+    padding: 2rem 4rem;
+}
+
+.plan:nth-child(2) .plan__btn {
+    background-color: rgb(247 250 252);
+    color: rgb(100 21 255);
+}
+.plan__btn {
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    transition: all 300ms ease;
+    width: 100%;
+    border-radius: 500px;
+    font-size: .875rem;
+    letter-spacing: 0.05rem;
+}
+
+.plan__btn:hover {
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.pricing__blob {
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    bottom: 0;
+    transform: TranslateX(-50%) translateY(50%) scaleX(1) ScaleY(1);
+    height: 256px;
+    width: 256px;
+    opacity: 0.3
 }
